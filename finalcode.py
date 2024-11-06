@@ -28,7 +28,7 @@ out = cv2.VideoWriter(output_video_path, fourcc, fps, (original_width, original_
 def cylindrical_warp(img):
     """Warp the input image to a cylindrical perspective."""
     h, w = img.shape[:2]
-    f = w / 3  # Focal length, adjust for flattening amount
+    f = w / 2  # Focal length, adjust for flattening amount
 
     # Generate the cylindrical warp transformation
     cylinder = np.zeros_like(img)
